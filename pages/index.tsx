@@ -30,77 +30,45 @@ export default function Home() {
         <section className='hero'>
           <div className="hero-left">
             <h1 className="header-title">Nutrition Labels Made Easy</h1>
-            <h2>Select the item category and we will generate the appropriate label:</h2>
           </div>
           <div className="hero-right">
             <Image className="image-hero" src='/../public/assets/nutrition_label.jpg' alt={'nutrition label example image'} width={350} height={700}/>
           </div>
         </section>
-        <section className='coffee-section item-section'>
-          <h3>Espresso & Coffee</h3>
-          <ul>
+        <section className='item-section'>
+          <h2>Select the item category and we will generate the appropriate label:</h2>
+          <ul className="menu-items">
             <li>
               <Image src="/../public/assets/hot_coffee.png" alt='hot coffee image' width={85} height={160}/>
-              <p className="item-description">Hot Coffee</p>
+              <p className="item-description">Hot Coffees</p>
             </li>
             <li>
-              <Image src="/../public/assets/iced_americano.png" alt='iced americano image' width={85} height={160}/>
-              <p className="item-description">Iced Americano</p>
+              <Image src="/../public/assets/iced_americano.png" alt='iced coffee image' width={85} height={160}/>
+              <p className="item-description">Iced Coffees</p>
             </li>
             <li>
-              <Image src="/../public/assets/hot_latte.png" alt='hot latte image' width={85} height={160}/>
-              <p className="item-description">Hot Latte</p>
+              <Image src="/../public/assets/hot_tea.png" alt='hot tea image' width={85} height={160}/>
+              <p className="item-description">Hot Teas</p>
+            </li>
+            <li>
+              <Image src="/../public/assets/iced_tea.png" alt='iced tea image' width={85} height={160}/>
+              <p className="item-description">Iced Teas</p>
             </li>
             <li>
               <Image src="/../public/assets/iced_latte.png" alt='iced latte image' width={85} height={160}/>
-              <p className="item-description">Iced Latte</p>
+              <p className="item-description">Other Hot Drinks</p>
             </li>
             <li>
-              <p> Arrow </p>
-            </li>
-          </ul>
-        </section>
-        <section className='tea-section item-section'>
-          <h3>Teas & More</h3>
-          <ul>
-            <li>
-              <Image src="/../public/assets/hot_tea.png" alt='hot tea image' width={105} height={210}/>
-              <p className="item-description">Tea</p>
+              <Image src="/../public/assets/iced_latte.png" alt='iced latte image' width={85} height={160}/>
+              <p className="item-description">Other Iced Drinks</p>
             </li>
             <li>
-              <Image src="/../public/assets/dunkin_refresher.png" alt='dunkin refresher image' width={110} height={210}/>
-              <p className="item-description">Dunkin' Refreshers</p>
+              <Image src="/../public/assets/iced_latte.png" alt='iced latte image' width={85} height={160}/>
+              <p className="item-description">Frozen Drinks</p>
             </li>
             <li>
-              <Image src="/../public/assets/hot_tea.png" alt='iced tea image' width={105} height={215}/>
-              <p className="item-description">Iced Tea</p>
-            </li>
-            <li>
-              <Image src="/../public/assets/iced_matcha_latte.png" alt='iced matcha latte image' width={110} height={200}/>
-              <p className="item-description">Iced Matcha Latte</p>
-            </li>
-            <li>
-              <p> Arrow </p>
-            </li>
-          </ul>
-        </section>
-        <section className='sandwiches-section item-section'>
-          <h3>Sandwiches & More</h3>
-          <ul>
-            <li>
-              <Image src="/../public/assets/SourdoughBNT.png" alt='hot coffee image' width={200} height={200}/>
-              <p className="item-description">Sourdough Breakfast Sandwich</p>
-            </li>
-            <li>
-              <Image src="/../public/assets/bagel.png" alt='iced americano image' width={210} height={160}/>
-              <p className="item-description">Bacon, Egg & Cheese</p>
-            </li>
-            <li>
-              <Image src="/../public/assets/croissant.png" alt='hot latte image' width={200} height={180}/>
-              <p className="item-description">Sausage, Egg & Cheese</p>
-            </li>
-            <li>
-              <p> Arrow </p>
+              <Image src="/../public/assets/SourdoughBNT.png" alt='iced latte image' width={140} height={160}/>
+              <p className="item-description">Sandwiches & More</p>
             </li>
           </ul>
         </section>

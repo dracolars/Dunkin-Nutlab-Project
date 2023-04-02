@@ -3,7 +3,7 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  max-width: 1390px;
+  max-width: 1450px;
   margin: 0 auto;
   background-color: #f8f4f1;
   border-right: 1px solid #d5ceca;
@@ -102,17 +102,16 @@ main {
 
 /* HERO TITLE AND IMAGE */
 .header-title {
-  margin: 0;
+  margin: 40px 0 0 0;
   color: #3e342f;
   font-size: 4em;
   text-transform: uppercase;
-  margin-bottom: 0.5em;
 }
 
 .hero {
   display: flex;
   overflow: hidden;
-  padding: 2em 3em 1em 3em;
+  padding: 1.5em 3em 0 3em;
 }
 
 .hero-left {
@@ -120,17 +119,11 @@ main {
   text-align: left;
 }
 
-.hero-left h2 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  color: #3e342f;
-}
-
 .hero-right {
-  height: 30em;
+  height: 26em;
   width: 40%;
   text-align: center;
-  height: 17em;
+  height: 15em;
   position: relative;
   top: 18px;
 }
@@ -139,52 +132,69 @@ main {
   filter: drop-shadow(20px -20px 0px #d5ceca);
 }
 
-/* ITEM-SECTIONS (UL LI AND LINKS WITH ITEM IMAGES) */
-.item-section {
+.item-section h2 {
+  margin-top: 20px;
   text-align: center;
-  padding: 0.5em 0 1.5em 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
   color: #3e342f;
-  padding: 2px;
 }
 
-.item-section:hover {
-  background-color: #d1c9c4;
-  border: 2px solid #777;
-  padding: 0;
-  z-index: 10;
-  cursor: pointer;
-  color: #000;
-}
-
-.item-section h3 {
-  text-transform: uppercase;
-  line-height: 3em;
-  margin-top: 0;
-}
-
-.item-section ul {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0 8em;
-}
-
-.item-section ul li {
+/* ITEM-SECTIONS (UL LI AND LINKS WITH ITEM IMAGES) */
+.menu-items {
+  margin: 0;
+  padding: 0 40px 30px 40px;
   list-style: none;
-  color: #c63663;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  text-align: center;
 }
 
-/* SECTION 2: ESPRESSO AND COFFEE */
-.coffee-section {
-  background-color: #f8f4f1;
+.menu-items li {
+  position: relative;
+  top: 50px;
+  color: white;
+  display: block;
+  height: 140px;
+  width: 280px;
+  min-width: 250px;
+  border: 1px solid #b3b3b3;
+  margin: 80px 10px 100px 10px;
+  border-radius: 30px;
+  padding: 0 20px 0 20px;
+  cursor: pointer;
+  transition: scale 1s, background-color 1s, border 1s, color 1s;
 }
 
-/* SECTION 3: TEA & MORE */
-.tea-section {
-  background-color: #fff;
+.menu-items li:hover {
+  border: 1px solid #cc4f77;
+  background-color: #fadae4;
+  scale: 1.04;
 }
 
-/* SECTION 3: SANDWICHES & MORE */
-.sandwiches-section {
-  background-color: #f8f4f1;
+.menu-items img {
+  position: relative;
+  bottom: 100px;
+  max-height: 212px;
+  max-width: 190px;
+  width: auto;
+  height: auto;
+  z-index: 5;
+}
+
+.menu-items p {
+  position: relative;
+  bottom: 110px;
+  margin: 0 auto 0 auto;
+  width: 244px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-transform: uppercase;
+  background-color: #c63663;
+  border-radius: 50px;
+  z-index: 10;
 }
