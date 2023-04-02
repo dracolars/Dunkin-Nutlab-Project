@@ -1,0 +1,56 @@
+.colors {
+  border: 1px solid #3e342f;
+  margin: 1em 2em;
+}
+
+.main h1 {
+  text-align: center;
+}
+
+.colors h2 {
+  padding: 0 0 0 2em;
+}
+
+.colors li {
+  display: inline-block;
+  height: 8em;
+  width: 25%;
+  border: 1px solid #3e342f;
+  margin: 2em 2em;
+}
+
+.orange {
+  background-color: #ef6a00;
+}
+
+.pink {
+  background-color: #c63663;
+}
+
+.text {
+  background-color: #3e342f;
+}
+
+.background {
+  background-color: #f8f4f1;
+}
+
+.colors li p {
+  text-align: center;
+  padding: auto 0;
+}
+
+.fonts {
+  border: 1px solid #3e342f;
+  margin: 1em 2em;
+}
+
+.fonts li {
+  list-style: none;
+}
+
+.fonts h1,
+.fonts h2,
+.fonts h3 {
+  text-align: left;
+}
