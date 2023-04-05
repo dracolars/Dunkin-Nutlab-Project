@@ -4,6 +4,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   max-width: 1450px;
+  min-width: 300px;
   margin: 0 auto;
   background-color: #f8f4f1;
   border-right: 1px solid #d5ceca;
@@ -24,6 +25,7 @@ header h3 {
 header h3 a {
   color: #281f1b;
   text-decoration: none;
+  transition: color 0.5s;
 }
 
 header h3 a::before {
@@ -35,7 +37,7 @@ header h3 a::before {
 }
 
 header h3 a:hover {
-  color: #aaa;
+  color: #8d8d8d;
 }
 
 /* NAV LINKS */
@@ -47,7 +49,7 @@ nav {
 
 nav ul {
   margin: 0;
-  padding: 1em 0 1em 0;
+  padding: 0.5em 0 0.5em 0;
   background-color: white;
   display: flex;
   justify-content: space-around;
@@ -65,6 +67,7 @@ nav ul li {
 nav a {
   color: #3e342f;
   text-decoration: none;
+  transition: color 0.5s;
 }
 
 nav a.active {
@@ -102,9 +105,9 @@ main {
 
 /* HERO TITLE AND IMAGE */
 .header-title {
-  margin: 40px 0 0 0;
+  margin: 35px 0 0 0;
   color: #3e342f;
-  font-size: 4em;
+  font-size: 4.5em;
   text-transform: uppercase;
 }
 
@@ -134,6 +137,7 @@ main {
 
 .item-section h2 {
   margin-top: 20px;
+
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
@@ -145,49 +149,44 @@ main {
   margin: 0;
   padding: 0 40px 30px 40px;
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  justify-items: center;
   align-content: space-around;
   text-align: center;
 }
 
 .menu-items li {
-  position: relative;
-  top: 50px;
-  color: white;
-  display: block;
-  height: 140px;
-  width: 280px;
+  height: 360px;
+  width: 300px;
   min-width: 250px;
   border: 1px solid #b3b3b3;
-  margin: 80px 10px 100px 10px;
   border-radius: 30px;
+  margin: 30px 10px 0 10px;
   padding: 0 20px 0 20px;
   cursor: pointer;
-  transition: scale 1s, background-color 1s, border 1s, color 1s;
+  transition: scale 1s, background-color 1s, border 1s, color 1s, width 1s,
+    height 1s;
 }
 
 .menu-items li:hover {
   border: 1px solid #cc4f77;
   background-color: #fadae4;
   scale: 1.04;
+  color: #3e342f;
 }
 
 .menu-items img {
-  position: relative;
-  bottom: 100px;
-  max-height: 212px;
-  max-width: 190px;
+  margin-top: 20px;
+  max-height: 240px;
+  max-width: 120px;
   width: auto;
   height: auto;
-  z-index: 5;
 }
 
 .menu-items p {
-  position: relative;
-  bottom: 110px;
-  margin: 0 auto 0 auto;
+  margin: 10px auto 0 auto;
   width: 244px;
   height: 48px;
   display: flex;
@@ -195,6 +194,322 @@ main {
   justify-content: space-evenly;
   text-transform: uppercase;
   background-color: #c63663;
+  color: white;
   border-radius: 50px;
+}
+
+.sandwich img {
+  margin-top: 40px;
+  max-height: 240px;
+  max-width: 228px;
+  width: auto;
+  height: auto;
+}
+
+/* TABLET VIEW */
+@media only screen and (max-width: 1200px) {
+  .hero-left {
+    width: 100%;
+    font-size: 0.95;
+    text-align: center;
+  }
+
+  .hero-right {
+    display: none;
+  }
+
+  .item-section h2 {
+    font-size: 1.25em;
+  }
+
+  .menu-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .menu-items li {
+    height: 360px;
+    width: 320px;
+    min-width: 200px;
+    margin: 30px 10px 0 10px;
+    border: 1px solid #b3b3b3;
+  }
+}
+
+/* MOBILE VIEW */
+@media only screen and (max-width: 780px) {
+  .hero {
+    padding: 0;
+  }
+
+  .hero-left {
+    width: 100%;
+    font-size: 0.75em;
+  }
+
+  .item-section h2 {
+    font-size: 1em;
+  }
+
+  .menu-items {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .menu-items li {
+    height: 360px;
+    width: 310px;
+    min-width: 200px;
+    margin: 30px 10px 0 10px;
+    border: 1px solid #b3b3b3;
+  }
+}
+
+/* -TINY- MOBILE VIEW */
+@media only screen and (max-width: 780px) {
+  .hero {
+    padding: 0;
+  }
+
+  .hero-left {
+    width: 100%;
+    font-size: 0.75em;
+  }
+
+  .item-section h2 {
+    font-size: 1em;
+  }
+
+  .menu-items {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .menu-items li {
+    height: 360px;
+    width: 310px;
+    min-width: 200px;
+    margin: 30px 10px 0 10px;
+    border: 1px solid #b3b3b3;
+  }
+}
+
+/*   - - -  Nutrition Label Page - - -      */
+
+section.options {
+  margin: 0 auto;
+  padding-top: 20px;
+  text-align: center;
+  color: #3e342f;
+}
+
+fieldset {
+  border: none;
+  height: 80px;
+}
+
+legend {
+  margin: 10px auto 0 auto;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+/* DROPDOWN MENUS */
+
+div.select {
+  height: 40px;
+  width: 220px;
+  display: inline-flex;
+  align-items: center;
+  background-color: white;
+  color: #3e342f;
+  border: 2px solid #b3b3b3;
+  border-radius: 20px;
+  text-align: left;
+  padding-left: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  letter-spacing: 0.75px;
+  cursor: pointer;
+  transition: background-color 0.3s;
   z-index: 10;
+}
+
+div.select span {
+  width: 189px;
+  font-size: 1.1em;
+  margin-left: 0px;
+}
+
+div.select .caret::after {
+  content: "\f151";
+  font-family: "Font Awesome 6 free";
+  font-weight: 200;
+  font-size: 1em;
+  color: #3e342f;
+  opacity: 0.9;
+}
+
+.caret-rotate {
+  transform: rotate(180deg);
+}
+
+.select:hover {
+  background: #d5ceca;
+}
+
+.menu {
+  position: relative;
+  top: -0.9em;
+  left: 50%;
+  width: 200px;
+  transform: translate(-50%);
+  list-style: none;
+  padding: 8px 10px;
+  background-color: white;
+  border: 2px solid #b3b3b3;
+  box-shadow: 0 0.5em 1em rgba(54, 21, 2, 0.2);
+  border-radius: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 1.1em;
+  text-align: left;
+  letter-spacing: 0.75px;
+  opacity: 0;
+  display: none;
+  z-index: 1;
+}
+
+.menu li {
+  padding: 8px 0 8px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.menu li.active {
+  background-color: #d1c9c4;
+}
+
+.menu li:hover {
+  background-color: #d1c9c4;
+  border-radius: 5px;
+}
+
+.menu-open {
+  display: block;
+  opacity: 1;
+}
+
+/* RADIO BUTTONS FOR SIZE */
+
+input[type="radio"] {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: 2px solid #3e342f;
+  background-color: white;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  z-index: 0;
+}
+
+input[type="radio"]:hover {
+  background: #d5ceca;
+}
+
+.options label.size {
+  margin: 0;
+  display: inline-block;
+  height: 50px;
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.size-options label p {
+  position: relative;
+  bottom: 50px;
+  left: 1px;
+  cursor: pointer;
+  z-index: 0;
+}
+
+input[type="radio"]:checked {
+  /*no need, if you don't disable default appearance*/
+  background-color: #3e342f;
+  color: white;
+}
+
+input[type="radio"]:checked + p {
+  color: white;
+}
+
+/* CHECKBOX STYLE */
+
+.add-on-options {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.add-on-options input {
+  display: none;
+}
+
+.add-on-options label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1em;
+  letter-spacing: 0.75px;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: relative;
+  right: 10px;
+  min-height: 20px;
+  min-width: 20px;
+  border: 2px solid #3e342f;
+  border-radius: 4px;
+  background-color: white;
+  transition: background-color 0.3s;
+}
+
+.add-on-options input:hover ~ .checkmark {
+  background-color: #d5ceca;
+}
+
+.add-on-options input:checked ~ .checkmark {
+  background-color: #3e342f;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.add-on-options input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.add-on-options .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
