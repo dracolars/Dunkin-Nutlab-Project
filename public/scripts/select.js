@@ -27,4 +27,8 @@ dropdowns.forEach((dropdown) => {
       option.classList.add("active");
     });
   });
+
+  dropdown.onmouseleave = (event) => {
+    menu.classList.remove("menu-open");
+  };
 });

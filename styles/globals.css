@@ -317,6 +317,11 @@ legend {
 
 /* DROPDOWN MENUS */
 
+.dropdown {
+  width: 400px;
+  margin: 0 auto;
+}
+
 div.select {
   height: 40px;
   width: 220px;
@@ -362,7 +367,9 @@ div.select .caret::after {
 
 .menu {
   position: relative;
-  top: -0.9em;
+  margin-top: 0.2em;
+  margin-bottom: 1em;
+  top: -0.5em;
   left: 50%;
   width: 200px;
   transform: translate(-50%);
